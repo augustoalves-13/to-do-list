@@ -19,7 +19,8 @@ export async function LoginUser(email , senha){
    `
       select id_usuario    id,
              nm_usuario    nome,
-             ds_email      email
+             ds_email      email,
+             ds_senha      senha
         from tb_usuario
        where ds_email   =  ?
          and ds_senha   =  ?

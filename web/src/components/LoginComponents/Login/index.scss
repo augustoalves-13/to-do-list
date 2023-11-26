@@ -1,0 +1,120 @@
+.box-login {
+   height: 65%;
+   width: 55%;
+   border-radius: 15px;
+   background-color: #fff;
+   box-shadow: 0px 3px 15px 5px #15151521;
+   position: absolute;
+   transform: translate(-50%, -50%);
+   top: 53%;
+   left: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   .content {
+      height: 95%;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+
+      h1{
+         color: #707070;
+      }
+
+      .btn-effect {
+         width: 175px;
+         height: 46px;
+         border-radius: 10px;
+         border: 3px solid #BD00FF;
+         color: #BD00FF;
+         font-weight: 550;
+         font-size: 16px;
+         letter-spacing: 1px;
+         transition: 1s;
+         background: transparent;
+      }
+
+      .btn-effect:hover {
+         transform: scale(1.05);
+      }
+
+      p{
+         color: #f11946;
+         position: absolute;
+         bottom: 5%;
+         font-weight: 500;
+      }
+      
+   }
+
+   .box-absolute {
+      width: 50%;
+      max-width: 50%;
+      height: 100%;
+      background: linear-gradient(191deg, #1F4DEF 6.67%, #BD00FF 112.64%);
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 17%;
+      flex-direction: column;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      left: 75%;
+      top: 50%;
+      transition: .8s;
+      padding: 0px 10px;
+
+      h1 {
+         font-size: 35px;
+         color: #fff;
+         width: 40%;
+         text-align: center;
+
+         span{
+            transition: .6s;
+         }
+      }
+
+
+
+      .btn-container {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+
+
+         p {
+            color: #fff;
+         }
+
+         button {
+            height: 40px;
+            width: 200px;
+            border-radius: 10px;
+            border: 3px solid #fff;
+            color: #fff;
+            background: transparent;
+
+            font-size: 16px;
+            font-weight: 700;
+         }
+      }
+   }
+
+   .register-box{
+      left: 25%;
+      border-radius: 15px 100px 100px 15px;
+
+      span{
+         visibility: hidden;
+         color: #ffffff00;
+      }
+   }
+
+   .login-box{
+      border-radius: 100px 15px 15px 100px;
+   }
+}
