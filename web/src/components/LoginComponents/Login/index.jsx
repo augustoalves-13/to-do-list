@@ -55,7 +55,6 @@ const BoxLogin = (props) => {
 
          setSelect(false)
          setEmail(isEmail)
-         setSenha(isSenha)
       } catch (err) {
          toast.error(err.response.data.erro)
 
