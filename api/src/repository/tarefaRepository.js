@@ -43,3 +43,14 @@ export async function ListTaskFromId(id){
     const [lines] = await con.query(command , [id])
     return lines
 }
+
+export async function DeleteTask (id) {
+   const command = 
+   `
+   delete from tb_tarefa 
+          where id_tarefa = ?
+   `
+
+   const [resp] = await con.query(command , [ id ])
+   return resp.affectedRows
+}

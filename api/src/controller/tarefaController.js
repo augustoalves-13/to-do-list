@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { ListAllTasks, ListTaskFromId, NewTask } from '../repository/tarefaRepository.js'
+import { DeleteTask, ListAllTasks, ListTaskFromId, NewTask } from '../repository/tarefaRepository.js'
 
 const server = Router()
 
@@ -43,6 +43,21 @@ server.get("/user/:id/tarefas" , async(req, resp) => {
       resp.status(404).send({
          erro:err.message
       })
+   }
+})
+
+server.delete('/user/tarefas/:id' , async(req, resp)=>{
+   try {
+      
+      const { id } = req.params
+      const response = await DeleteTask(id)
+      if(response != 0)
+         throw new Error('A tarefa não pode ser excluída')
+
+      resp.status(204).send()
+
+   } catch (err) {
+      resp.status(500).send({erro:err.message})
    }
 })
 
