@@ -38,6 +38,7 @@ const HomePage = () => {
       UserInfo()
    }, [])
 
+
    return (
       <div className="home-container">
          <HeaderLogin />

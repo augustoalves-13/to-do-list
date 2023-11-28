@@ -1,6 +1,6 @@
 import StandartInput from '../../LoginComponents/Input'
 import './index.scss'
-import gif from '../../../assets/giphy.gif'
+import gif from '../../../assets/vector-list.png'
 import { useState } from 'react'
 import { CadastrarTarefa } from '../../../api/tarefas'
 import Storage from 'local-storage'

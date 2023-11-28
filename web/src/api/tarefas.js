@@ -24,3 +24,8 @@ export async function ListTaksFromUserId(id){
    const r = await api.get(`user/${id}/tarefas`)
    return r.data
 }
+
+export async function DeleteTaskFromId(id){
+   const r = await api.delete(`user/tarefas/${id}`)
+   return r.data
+}
