@@ -1,9 +1,12 @@
 import './index.scss'
 
-const Footer = () =>{
-    return(
+const Footer = () => {
+    return (
         <footer>
-            <h1>Developed by Augusto Alves🚀</h1>
+            <div>
+                <h1>Developed by Augusto Alves🚀</h1>
+                <h1>Todos os direitos reservados</h1>
+            </div>
         </footer>
     )
 }
