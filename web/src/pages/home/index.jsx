@@ -6,6 +6,7 @@ import HeaderLogin from '../../components/LoginComponents/HeaderLogin'
 import TaskContainer from '../../components/TaskContainer'
 import { ListTaksFromUserId } from '../../api/tarefas'
 import ModalTask from '../../components/Modals/ModalTask'
+import Footer from '../../components/Footer'
 
 const HomePage = () => {
    const [name, setName] = useState('Carregando...')

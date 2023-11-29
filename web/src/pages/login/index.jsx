@@ -5,6 +5,7 @@ import './index.scss'
 import { useEffect, useRef } from 'react'
 import Storage from 'local-storage'
 import { useNavigate } from 'react-router-dom'
+import Footer from '../../components/Footer'
 
 const LoginPage = () => {
 
