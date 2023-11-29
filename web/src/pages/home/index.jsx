@@ -24,7 +24,11 @@ const HomePage = () => {
       try {
          const resp = await ListTaksFromUserId(Storage('usuario-logado').data.id)
 
-         setResult("Ultimas Anotações")
+         if(!resp){
+            setResult("Nenhuma Task foi adicionada")
+         } else{
+            setResult("Ultimas Anotações")
+         }
          setTarefas(resp)
       } catch (err) {
          setResult("Nenhuma Task foi adicionada")
@@ -57,6 +61,11 @@ const HomePage = () => {
                   </button>
                </div>
                <section className="content-task">
+
+                  {!tarefas &&  
+                     <h1>{result}</h1>
+                  }
+
                   {tarefas.map(item =>
                      <TaskContainer item={item} />
                   )}
