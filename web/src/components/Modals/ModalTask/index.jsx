@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { CadastrarTarefa } from '../../../api/tarefas'
 import Storage from 'local-storage'
 import { toast } from 'react-toastify'
+import Footer from '../../Footer'
 
 const ModalTask = (props) => {
    const [title, setTitle] = useState("")

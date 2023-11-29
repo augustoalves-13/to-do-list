@@ -24,9 +24,9 @@ const HomePage = () => {
       try {
          const resp = await ListTaksFromUserId(Storage('usuario-logado').data.id)
 
-         if(!resp){
+         if (!resp) {
             setResult("Nenhuma Task foi adicionada")
-         } else{
+         } else {
             setResult("Ultimas Anotações")
          }
          setTarefas(resp)
@@ -62,7 +62,7 @@ const HomePage = () => {
                </div>
                <section className="content-task">
 
-                  {!tarefas &&  
+                  {!tarefas &&
                      <h1>{result}</h1>
                   }
 
@@ -75,6 +75,7 @@ const HomePage = () => {
          {modalVisible &&
             <ModalTask onClose={() => setModalVisible(false)} />
          }
+         <Footer />
       </div>
    )
 }

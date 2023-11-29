@@ -26,6 +26,7 @@ const LoginPage = () => {
          <LoadingBar height={4} className='loader' color='#f11946' ref={ref} />
          <HeaderLogin />
          <BoxLogin referencia={ref} />
+         <Footer/>
       </div>
    )
 }
