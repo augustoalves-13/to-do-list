@@ -53,10 +53,11 @@
 }
 
 .card-container{
-   transition: .5s;
+   transition: .8s;
 }
 
 .modal-task{
+   overflow: hidden;
    height: 50vh;
    width: 50vh;
    background-color: #f8f8f8;
@@ -98,6 +99,7 @@
      
       button{
          background: transparent;
+         border: none;
       }
    }
 }
