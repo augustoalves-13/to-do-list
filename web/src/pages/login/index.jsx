@@ -6,6 +6,7 @@ import { useEffect, useRef } from 'react'
 import Storage from 'local-storage'
 import { useNavigate } from 'react-router-dom'
 import Footer from '../../components/Footer'
+import { background, secondary, theme } from '../../components/Styles/styles'
 
 const LoginPage = () => {
 
@@ -18,8 +19,21 @@ const LoginPage = () => {
       }
    }
 
+   const Theme = () => {
+
+      let data = {
+         principal: background,
+         secudaria: secondary,
+         tema: theme
+      }
+
+      if(Storage('usuario-logado')){
+         Storage('temas', data)
+      }
+   }
+
    useEffect(() => {
-      AutoLogin()
+      Theme()
    }, [])
 
    return (

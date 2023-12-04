@@ -24,6 +24,8 @@ const ModalTask = (props) => {
       }
    }
 
+
+
    return (
       <div className="modal-container">
          <div className="modal-box">

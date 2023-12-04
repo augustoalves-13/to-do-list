@@ -1,30 +1,37 @@
-import { useEffect, useState } from "react"
-import Storage from 'local-storage'
-import './index.scss'
-import HeaderLogin from "../../components/LoginComponents/HeaderLogin"
+import { useEffect, useState } from "react";
+import Storage from 'local-storage';
+import './index.scss';
+import HeaderLogin from "../../components/LoginComponents/HeaderLogin";
 
-const ProfilePage = ( ) => {
+const ProfilePage = () => {
+    const [name, setName] = useState('Carregando...');
+    const [color, setColor] = useState('');
 
-    const [ name, setName ] = useState('Carregando...')
-    const [ senha, setSenha ] = useState('**********')
-    const [ email, setEmail ] = useState('')
-    
+    useEffect(() => {
+        ProfileInfo();
+    }, []);
 
     const ProfileInfo = () => {
-        const user = Storage('usuario-logado').data
-        setName(user.nome)
-    } 
+        const user = Storage('usuario-logado').data;
+        setName(user.nome);
+    }
 
-    useEffect(()=>{
-        ProfileInfo()
-    },[])
+    const SaveColor = () => {
+        const temas = Storage('temas') || {}; // Get the current 'temas' object from Storage
 
-    return(
+        temas.principal = color; // Update the 'principal' property with the new color
+
+        Storage('temas', temas); // Save the updated 'temas' object back to Storage
+    }
+
+    return (
         <div className="profile-container">
-            <HeaderLogin/>
+            <HeaderLogin />
             <p>{name}</p>
+            <input type="color" value={color} onChange={e => setColor(e.target.value)} />
+            <button onClick={SaveColor}>Salvar</button>
         </div>
-    )
+    );
 }
 
-export default ProfilePage
+export default ProfilePage;
